@@ -1,9 +1,15 @@
 <template>
-  <div id="App">
+  <div id="App" @scroll="handleScroll">
     <div id="scrollDots">
-      <div class="scrollDot" id="activedot"></div>
-      <div class="scrollDot"></div>
-      <div class="scrollDot"></div>
+      <div>
+        <div class="scrollDot" id="activedot" @click="goToPage(1)"></div>
+      </div>
+      <div>
+        <div class="scrollDot" id="" @click="goToPage(2)"></div>
+      </div>
+      <div>
+        <div class="scrollDot" id="" @click="goToPage(3)"></div>
+      </div>
     </div>
     <PageHeader></PageHeader>
     <InventorySearch/>
@@ -30,7 +36,7 @@
       </div>
     </div>
     <div id="fullpage">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12714.724830658051!2d-93.36655444150506!3d37.1840463979456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf61b2e1dfde01%3A0x84db824ceb602bf6!2sPristine%20Auto%20Line!5e0!3m2!1sen!2sus!4v1669012717247!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12714.724830658051!2d-93.36655444150506!3d37.1840463979456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf61b2e1dfde01%3A0x84db824ceb602bf6!2sPristine%20Auto%20Line!5e0!3m2!1sen!2sus!4v1669012717247!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 
@@ -53,13 +59,66 @@ export default {
   data(){
     return{
       car_list: [],
+      pageList: [],
     }
   },
   methods: {
+    handleScroll(e){
+      var h = document.getElementById('App').scrollHeight;
+      var section = (e.srcElement.scrollTop / h).toFixed(3);
+      section = parseFloat(section);
+      if(section > 0.45){
+        //case 3
+        this.pageList[0].id = "";
+        this.pageList[1].id = "";
+        this.pageList[2].id = "activedot";
+        return;
+      }
+      if(section < 0.25)
+      {
+        //case 1
+        this.pageList[0].id = "activedot";
+        this.pageList[1].id = "";
+        this.pageList[2].id = "";
+        return;
+      }
+      else if(section < 0.45 || section > 0.33)
+      {
+        //case 2
+        this.pageList[0].id = "";
+        this.pageList[1].id = "activedot";
+        this.pageList[2].id = "";
+        return;
+      }     
 
+    },
+    goToPage(pageNum){
+      var h = document.getElementById('App');
+      switch(pageNum){
+        case 1:
+            this.pageList[0].id = "activedot";
+            this.pageList[1].id = "";
+            this.pageList[2].id = "";
+            h.scrollTop = 50;
+            break;
+          case 2:
+            this.pageList[0].id = "";
+            this.pageList[1].id = "activedot";
+            this.pageList[2].id = "";
+            h.scrollTop = 500;
+            break;
+          case 3:
+            this.pageList[0].id = "";
+            this.pageList[1].id = "";
+            this.pageList[2].id = "activedot";
+            h.scrollTop = 2000;
+            break;
+        }
+    }
   },
   mounted(){
     this.car_list = carlist;
+    this.pageList = document.getElementsByClassName('scrollDot');
   }
 }
 </script>
@@ -76,6 +135,8 @@ body,html{
   position: relative;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  scroll-behavior: smooth;
+
   width: 100vw; height: 100vh;
 }
 #card_holder{
@@ -87,7 +148,7 @@ body,html{
 }
 #scrollDots{
   position: fixed;
-  left: 25px;
+  right: 25px;
   top: 50%;
   transform: translate(-50%, 0);
   display: flex;
@@ -97,6 +158,12 @@ body,html{
   gap: 15px;
   justify-content: center; align-items: center;
   transition: 0.5s ease;
+  z-index: 999;
+}
+#scrollDots>div{
+  width: 20px;
+  height: 20px;
+  display: flex; justify-content: center; align-items: center;
 }
 .scrollDot{
   background-color: rgba(0, 0, 0, 0.427);
@@ -105,6 +172,7 @@ body,html{
   height: 10px;
   cursor: pointer;
   transition: 0.1s ease;
+  border: 1px solid rgba(255,255,255,0.5);
 }
 .scrollDot:hover{
   width: 15px;
@@ -115,10 +183,17 @@ body,html{
   height: 20px;
 }
 #fullpage{
-  width: 100%; height: calc(100vh - 100px);
+  width: 100%; height: calc(100vh - 135px);
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex; justify-content: center;align-items: center;
-}
+  padding-top: 135px;
 
+}
+#map{
+  width: 100%; height: 100%;
+}
+::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
 </style>

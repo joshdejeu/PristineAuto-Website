@@ -19,8 +19,8 @@ export default {
     scroll-snap-align: start;
     scroll-snap-stop: always;
     position: relative;
-    width: 100%; height: calc(100vh - 100px);
-    padding-top: 100px;
+    width: 100%; height: calc(100vh - 135px);
+    padding-top: 135px;
     background: url('https://www.totalwebmanager.com/TWM/userfiles/4395/Custom/2.jpg');
     background-size: cover;
     background-position: center;

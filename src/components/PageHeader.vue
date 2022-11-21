@@ -53,5 +53,6 @@ export default {
 }
 #header_banner_bold{
   font-weight: bold;
+  cursor: bold;
 }
 </style>
