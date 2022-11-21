@@ -23,7 +23,7 @@
     How the Pristine Auto website was created
     <br />
     <br />
-    <a href="https://721b6d64.pristineauto-website.pages.dev/">View Live Site</a>
+    <a href="https://pristineauto-website.pages.dev/">View Live Site</a>
     ·
     <a href="https://github.com/joshdejeu/PristineAuto-Website/issues">Report Bug</a>
     ·
