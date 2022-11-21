@@ -9,7 +9,8 @@
         "title": "Clear",
         "vin": "5TFCZ5AN5MX259266",
         "carImg": "https://www.totalwebmanager.com/TWM/Images/4395/332137/Full/2720223012812284.jpg",
-        "onSale": true
+        "onSale": true,
+        "sold": false
     },
     {
         "type": "Cars",
@@ -21,7 +22,8 @@
         "title": "Clear",
         "vin": "1G1PE5SB4G7148559",
         "carImg": "https://www.totalwebmanager.com/TWM/Images/4395/332701/Full/22022310191945737.jpg",
-        "onSale": true
+        "onSale": true,
+        "sold": false
     },
     {
         "type": "SUVs",
@@ -33,6 +35,7 @@
         "title": "Clear",
         "vin": "KL4CJCSB8LB041960",
         "carImg": "https://www.totalwebmanager.com/TWM/Images/4395/328853/Full/32022264153531610.jpg",
-        "onSale": true
+        "onSale": false,
+        "sold": true
     }
 ]

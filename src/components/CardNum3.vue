@@ -12,13 +12,13 @@
       </div>
 
       <div id="vehicleCard_price">
-        <div id="vehicleCard_salePrice">
-          <div id="saleprice_text">SALE PRICE</div>
-          <div id="saleprice">19999</div>
-        </div>
         <div id="vehicleCard_listPrice">
           <div id="listprice_text">LIST PRICE</div>
-          <div id="listprice">29999</div>
+          <div id="listprice">$29999.99</div>
+        </div>
+        <div id="vehicleCard_salePrice">
+          <div id="saleprice_text">SALE PRICE</div>
+          <div id="saleprice">$19999.99</div>
         </div>
       </div>
         
@@ -28,7 +28,7 @@
 <script>
   
   export default {
-    name: 'VehicleCard',
+    name: 'CardNum3',
     props: [
       'carType',
       'year',
@@ -63,7 +63,6 @@
   transition: 0.2s ease;
   color: white;
   cursor: pointer;
-  z-index: 3;
 }
 #card::before{
   transition: 0.2s ease;
@@ -82,7 +81,7 @@
   left: 25%;
   top: 42%;
   margin-top: -0px;
-  z-index: 4;
+  z-index: 2;
   width: 50%; height: 15%;
   border-radius: 10px;
   background-color: rgba(0,0,0,0.5);
@@ -134,67 +133,37 @@
   justify-content: space-around;
   align-items: center;
   padding-bottom: 30px;
-  margin-left: 20px;
-  padding-right: 20px;
-  position: relative;
-  background: linear-gradient(40deg,#e7e7e7 50%,#F2F2F2 45%);
-  overflow: hidden;
   background-clip: content-box;
 }
-
 #vehicleCard_listPrice{
-  width: 100%; height: 50%;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
   justify-content: center; align-items: center;
-  z-index: 2;
+  font-size: 0.9em;
+  gap: 10px;
 }
 #listprice_text{
-  padding-left: 5px;
-  font-size: 0.75em;
+  font-weight: bold;
 }
 #listprice{
-  font-size: 1em;
-  padding-right: 10px;
   text-decoration: line-through;
-  position: relative;
-}
-#listprice::after{
-  content: '$';
-  position: absolute;
-  top: 0; left: 0;
-  margin-left: -7px;
-  margin-top: -3px;
-  font-size: 0.75em; font-weight: bold; 
 }
 #vehicleCard_salePrice{
-  width: 100%; height: 50%;
-  padding-top: 5px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
   justify-content: center; align-items: center;
-  color: rgb(192, 54, 54);
-  z-index: 2;
+  gap: 10px;
+  font-weight: 1.1em;
+  padding: 7px;
 }
 #saleprice_text{
-  width: 100%;
-  height: 100%;
-  font-size: 0.75em;
-  padding-left: 5px;
+  font-weight: bold;
 }
 #saleprice{
-  font-size: 1.1em;
-  padding-right: 10px;
-  position: relative;
-}
-#saleprice::after
-{
-  content: '$';
-  position: absolute;
-  top: 0; left: 0;
-  margin-left: -7px;
-  margin-top: -3px;
-  font-size: 0.75em; font-weight: bold; 
+  border-radius: 20px;
+  border: 2px solid rgb(20, 151, 55);
+  background-color: rgb(31, 184, 72);;
+  color: rgb(255, 255, 255);
+  font-family: 'Times New Roman', sans-serif;
+  padding: 5px;
 }
 </style>
   
