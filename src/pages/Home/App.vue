@@ -13,6 +13,7 @@
     :title="car.tite"
     :vin="car.vin"
     :carImg="car.carImg"
+    :sale="car.onSale"
     />
   </div>
 </template>

@@ -14,7 +14,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/joshdejeu/PristineAuto-Website">
-    <img src="src/assets/logo.png" alt="Logo" height="80">
+    <img src="src/assets/newlogo.png" alt="Logo" height="80">
   </a>
 
   <h3 align="center">Pristine Auto Website</h3>
@@ -23,7 +23,7 @@
     How the Pristine Auto website was created
     <br />
     <br />
-    <a href="https://PristineAuto-website.pages.dev/">View Live Site</a>
+    <a href="https://721b6d64.pristineauto-website.pages.dev/">View Live Site</a>
     ·
     <a href="https://github.com/joshdejeu/PristineAuto-Website/issues">Report Bug</a>
     ·

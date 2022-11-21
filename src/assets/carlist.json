@@ -8,7 +8,8 @@
         "mileage": "37,771",
         "title": "Clear",
         "vin": "5TFCZ5AN5MX259266",
-        "carImg": "https://www.totalwebmanager.com/TWM/Images/4395/332137/Full/2720223012812284.jpg"
+        "carImg": "https://www.totalwebmanager.com/TWM/Images/4395/332137/Full/2720223012812284.jpg",
+        "onSale": true
     },
     {
         "type": "Cars",
@@ -19,17 +20,19 @@
         "mileage": "97,528",
         "title": "Clear",
         "vin": "1G1PE5SB4G7148559",
-        "carImg": "https://www.totalwebmanager.com/TWM/Images/4395/332701/Full/22022310191945737.jpg"
+        "carImg": "https://www.totalwebmanager.com/TWM/Images/4395/332701/Full/22022310191945737.jpg",
+        "onSale": true
     },
     {
-        "type": "Trucks",
-        "year": "2021",
-        "make": "Toyota",
-        "model": "Tacoma 4WD",
-        "series": "TRD Off-road",
-        "mileage": "37,771",
+        "type": "SUVs",
+        "year": "2020",
+        "make": "Buick",
+        "model": "Encore",
+        "series": "Essence",
+        "mileage": "50,363",
         "title": "Clear",
-        "vin": "5TFCZ5AN5MX259266",
-        "carImg": "https://www.totalwebmanager.com/TWM/Images/4395/332137/Full/2720223012812284.jpg"
+        "vin": "KL4CJCSB8LB041960",
+        "carImg": "https://www.totalwebmanager.com/TWM/Images/4395/328853/Full/32022264153531610.jpg",
+        "onSale": true
     }
 ]
