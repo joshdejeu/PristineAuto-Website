@@ -55,4 +55,26 @@ export default {
   font-weight: bold;
   cursor: bold;
 }
+
+/* Slightly Resized Screen Styles */
+@media screen and (max-width: 1200px) {
+  #header_img{
+    width: 40%;
+  }
+}
+
+/* Half-Screen Styles */
+@media screen and (max-width: 900px) {
+  #header_img{
+    width: 50%;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  #header_img{
+    justify-content: flex-end;
+    width: 55%;
+  }
+}
 </style>

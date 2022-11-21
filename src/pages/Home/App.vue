@@ -1,14 +1,14 @@
 <template>
   <div id="App" @scroll="handleScroll">
     <div id="scrollDots">
-      <div>
-        <div class="scrollDot" id="activedot" @click="goToPage(1)"></div>
+      <div @click="goToPage(1)">
+        <div class="scrollDot" id="activedot"></div>
       </div>
-      <div>
-        <div class="scrollDot" id="" @click="goToPage(2)"></div>
+      <div @click="goToPage(2)">
+        <div class="scrollDot" id=""></div>
       </div>
-      <div>
-        <div class="scrollDot" id="" @click="goToPage(3)"></div>
+      <div @click="goToPage(3)">
+        <div class="scrollDot" id=""></div>
       </div>
     </div>
     <PageHeader></PageHeader>
@@ -148,39 +148,50 @@ body,html{
 }
 #scrollDots{
   position: fixed;
-  right: 25px;
+  right: 0;
   top: 50%;
   transform: translate(-50%, 0);
   display: flex;
   flex-direction: column;
   height: fit-content;
   width: fit-content;
-  gap: 15px;
+  gap: 10px;
   justify-content: center; align-items: center;
   transition: 0.5s ease;
   z-index: 999;
+  transition: 0.2s ease;
+  padding: 10px;
+}
+#scrollDots:hover{
+  border-radius: 50px;
+  background-color: rgba(0,0,0,0.5);
+}
+#scrollDots:hover>div>div{
+  background-color: white;
+  transition: 0.2s ease;
 }
 #scrollDots>div{
   width: 20px;
   height: 20px;
+  cursor: pointer;
   display: flex; justify-content: center; align-items: center;
 }
 .scrollDot{
-  background-color: rgba(0, 0, 0, 0.427);
+  background-color: black;
   border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  cursor: pointer;
+  width: 5px;
+  height: 5px;
   transition: 0.1s ease;
   border: 1px solid rgba(255,255,255,0.5);
+  transition: 0.2s ease;
 }
 .scrollDot:hover{
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
 }
 #activedot{
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 #fullpage{
   width: 100%; height: calc(100vh - 135px);
