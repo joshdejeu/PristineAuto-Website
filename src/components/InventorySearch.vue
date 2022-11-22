@@ -72,7 +72,7 @@ export default {
     position: relative;
     width: 100%; height: calc(100vh - 135px);
     padding-top: 135px;
-    background: url('@/assets/home/compressed.gif');
+    /* background: url('@/assets/home/compressed.gif'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
