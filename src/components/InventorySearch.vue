@@ -7,7 +7,7 @@
                 <button id="button_inventory_search">Search</button>
             </div>
             <div id="inventory_text">
-                {{countVehicle}} Vehicles Available
+                {{vehicleCount}} Vehicles Available
             </div>
             <div id="inventory_dropdowns">
                 <div class="inventory_dropdown_parent">
@@ -44,16 +44,16 @@ export default {
   data(){
     return{
         availableVehicles: 0,
-        countVehicle: 0,
+        vehicleCount: 0,
     }
   },
   methods:{
     countVehicles(){
-        if(this.countVehicle>=this.availableVehicles){
+        if(this.vehicleCount>=this.availableVehicles){
             return;
         }
         setTimeout(() => {
-            this.countVehicle++;
+            this.vehicleCount++;
             this.countVehicles();
         }, 100);
     }
