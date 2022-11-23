@@ -2,16 +2,16 @@
     <div v-if="isMobile" id="footer">
         <div id="option_center">
             <div class="footer_option active" @click="updateFooter(1)">
-                <font-awesome-icon icon="fa-solid fa-house"/> 
+                <icon icon="fa-solid fa-house" class="icon_outline"/> 
             </div>
             <div class="footer_option" @click="updateFooter(2)">
-                <font-awesome-icon icon="fa-solid fa-car"/>
+                <icon icon="fa-solid fa-car" class="icon_outline"/>
             </div>
             <div class="footer_option" @click="updateFooter(3)">
-                <font-awesome-icon icon="fa-solid fa-phone"/>
+                <icon icon="fa-solid fa-phone" class="icon_outline"/>
             </div>
             <div class="footer_option" @click="updateFooter(4)">
-                <font-awesome-icon icon="fa-solid fa-sack-dollar"/>
+                <icon icon="fa-solid fa-sack-dollar" class="icon_outline"/>
             </div>
 
         </div>

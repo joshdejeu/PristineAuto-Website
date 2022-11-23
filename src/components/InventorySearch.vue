@@ -177,9 +177,15 @@ export default {
 
 
 
-
-
-
+/* Odd Rules */
+@media screen and (max-width: 1600px) {
+    #button_inventory_search{
+        width: 15%;
+    }
+    #button_inventory_search_button{
+        width: 25%;
+    }
+}
 
 
 /* Slightly Resized Screen Styles */
@@ -190,6 +196,15 @@ export default {
     #inventory_text{
         font-size: 45px;
     }
+    #button_inventory_search{
+        width: 10%;
+    }
+    #button_inventory_search_button{
+        width: 20%;
+    }
+    .inventory_dropdown_parent{
+        height: 70%;
+    }
 }
 
 /* Half-Screen Styles */
@@ -199,6 +214,12 @@ export default {
     }
     #inventory_text{
         font-size: 40px;
+    }
+    #button_inventory_search{
+        width: 20%;
+    }
+    #button_inventory_search_button{
+        width: 30%;
     }
 }
 

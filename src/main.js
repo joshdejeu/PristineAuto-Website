@@ -14,13 +14,18 @@ import {
     faHouse,
     faPhone,
     faSackDollar,
-} from '@fortawesome/free-solid-svg-icons'
+} from '@fortawesome/free-solid-svg-icons';
 
 /* add icons to the library */
-library.add(faCar, faHouse, faPhone, faSackDollar)
+library.add(
+    faCar, 
+    faHouse, 
+    faPhone, 
+    faSackDollar
+);
 
 createApp(App)
-.component('font-awesome-icon', FontAwesomeIcon)
+.component('icon', FontAwesomeIcon)
 .mount('#app')
 
 

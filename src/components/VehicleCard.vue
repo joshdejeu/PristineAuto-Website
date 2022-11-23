@@ -50,13 +50,15 @@
 
 <style scoped>
 #card{
-  width: 230px; height: 330px;
+  max-width: 230px; max-height: 330px;
+  min-width: 230px; min-height: 330px;
   background-color: white; color: black;
   border: 1px solid rgb(186, 186, 186);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
   display: grid;
   grid-template-rows: 2fr 1fr 1fr;
   position: relative;
+  flex: 50%;
 }
 #card::after{
   content: '';

@@ -16,8 +16,7 @@
 
     <div id="fullpage">
       <div id="card_holder">
-        Style 1 <br>
-        (original)
+        <h1 id="card_holder_text">Featured Listings</h1>
         <VehicleCard v-for="(car, index) in car_list" :key="index" :carType="car.type" :year="car.year" :make="car.make"
           :model="car.model" :series="car.series" :milage="car.milage" :title="car.tite" :vin="car.vin"
           :carImg="car.carImg" :sale="car.onSale" :sold="car.sold" />
@@ -159,14 +158,18 @@ html {
 }
 
 #card_holder {
-  margin-top: 30px;
-  width: 100%;
-  height: calc(100% - 120px);
+  width: 80%; height: 100%;
   display: flex;
+  overflow-x: auto;
   justify-content: center;
   align-items: center;
+  gap: 30px 30px;
+  right: 10px;
   flex-wrap: wrap;
-  gap: 30px;
+}
+#card_holder::-webkit-scrollbar {
+  display: flex;
+  /* Safari and Chrome */
 }
 
 #scrollDots {
@@ -236,14 +239,28 @@ html {
   padding-top: 135px;
 
 }
-
+#card_holder_text{
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+}
 #map {
   width: 100%;
   height: 100%;
 }
-
 ::-webkit-scrollbar {
   display: none;
   /* Safari and Chrome */
+}
+
+
+
+/* Half-Screen Styles */
+@media screen and (max-width: 900px) {
+  #map {
+    width: 100%;
+    height: calc(100% - 70px);
+    margin-bottom: 70px;
+  }
 }
 </style>
